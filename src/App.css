@@ -1,0 +1,117 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  font-size: 1.5em;
+}
+
+h2,
+h3 {
+  font-weight: 400;
+}
+
+header.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+header.header button {
+  font-weight: 400;
+  transition: .3s ease background-color;
+}
+header.header button:hover {
+    background-color: rgba(0, 204, 255, 0.459);
+}
+header.header input {
+  width: 150px;
+}
+
+header.header :first-child {
+  border-radius: 0.3em 0 0 0.3em;
+  border-right: none;
+}
+header.header :last-child {
+  border-radius: 0 0.3em 0.3em 0;
+  /* border-left: none; */
+}
+
+main h3 {
+  font-size: 2em;
+}
+
+main h2 {
+  font-size: 2.75em;
+}
+
+main > section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-self: center;
+  align-items: center;
+}
+
+section.left {
+  grid-column: 1;
+  justify-self: end;
+}
+
+section.left button,
+section.left input {
+  border-color: rgba(255, 0, 0, 0.205);
+}
+section.left button:focus,
+section.left input:focus {
+  outline: 4px auto rgba(255, 0, 0, 0.705);
+}
+section.center {
+  grid-column: 2 / 5;
+}
+section.right {
+  grid-column: 5;
+  justify-self: start;
+}
+
+section.right button,
+section.right input {
+  border-color: rgba(0, 255, 0, 0.233);
+}
+section.right button:focus,
+section.right input:focus {
+  outline: 4px auto rgba(0, 255, 128, 0.877);
+}
+
+section > .form-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-control input {
+  width: 100px;
+  text-align: center;
+}
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000003f;
+  transition: 0.3s ease-in-out background-color;
+  z-index: 99999;
+}
